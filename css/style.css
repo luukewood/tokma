@@ -23,6 +23,8 @@ img {
   min-height: 1px;
   padding: 12px;
   position: relative; }
+  [class*='col-'].no_padding {
+    padding: 0px; }
 
 .clearfix:before,
 .clearfix:after {
@@ -159,6 +161,44 @@ header > .container::after {
     font-weight: bold; }
 
 .feature {
-  background-color: red; }
+  height: 650px;
+  position: relative; }
+
+.feature h4 {
+  color: #FFF;
+  font-size: 25px;
+  letter-spacing: 2px; }
+
+.feature_content {
+  padding: 50px;
+  height: 100%;
+  z-index: 100;
+  position: relative; }
+
+.bcg_placeholder {
+  position: absolute;
+  background-image: url("../img/milling.no3.jpg");
+  background-position: center center;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%; }
+
+.features .feature:nth-child(even) {
+  background-color: #fafafa;
+  background-image: url("../img/welding.png");
+  background-position: center center;
+  background-size: cover; }
+
+.services {
+  position: absolute;
+  bottom: 60px; }
+
+.services span {
+  display: block;
+  color: #FFF;
+  font-size: 22px;
+  padding: 15px 0; }
 
 /*# sourceMappingURL=style.css.map */
