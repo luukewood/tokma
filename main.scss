@@ -1,3 +1,12 @@
+@mixin trans-delay($delay) {
+
+	@for $i from 1 through 5 {
+		span:nth-child(#{$i}) {
+			transition-delay: $delay + (0.1 * $i) ;
+		}
+	}
+}
+
 * {
 	padding: 0;
 	margin: 0;
@@ -216,17 +225,48 @@ header > .container {
 	background-size: cover;
 }
 
-.services {
+.services, .materials {
 	position: absolute;
 	bottom: 60px;
+	overflow: hidden;
 }
 
-.services span {
+.bcg_placeholder {
+	// background: rgba(0, 0, 0, 0.2);
+}
+
+.services {
+	@include trans-delay(0.1s);
+}
+
+.materials {
+	@include trans-delay(0.1s);
+}
+
+.services span, 
+.materials span {
 	display: block;
+	transform: translateX(-350%);
+	transition: all 1s;
 	color: #FFF;
 	font-size: 22px;
 	padding: 15px 0;
 }
+
+
+.feature:hover .services span,
+.feature:hover .materials span{
+	transform: translateX(0%);
+}
+
+.contact_items {
+	background: #333;
+	padding: 150px 0;
+} 
+
+
+
+
 
 
 
